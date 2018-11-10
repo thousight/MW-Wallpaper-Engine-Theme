@@ -33,19 +33,3 @@ body {
   margin: 0;
   padding: 0;
 }
-
-.datetime {
-  position: absolute;
-  left: 50%;
-  bottom: 15px;
-  text-align: center;
-  transform: translate(-50%, -50%);
-}
-
-.datetime h1 {
-  cursor: default;
-  color: #FFFFFF;
-  font-weight: 300;
-  margin: 0;
-  user-select: none;
-}

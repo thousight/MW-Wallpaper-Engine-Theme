@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react';
 import moment from 'moment';
 
+import './style.css';
+
 const timeFormat = 'h:mm:ss a'
 const dateFormat = 'ddd MM/DD/YYYY'
 
