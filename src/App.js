@@ -9,7 +9,7 @@ class App extends PureComponent {
       <div className="wallpaper">
         <DateTime />
         <StarryLines />
-        </div>
+      </div>
     );
   }
 }
