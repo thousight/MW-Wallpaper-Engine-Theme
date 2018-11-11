@@ -8,7 +8,7 @@ import {
 
 let points = [];
 let context = null;
-let animateHeader = true;
+let arePointsShown = true;
 let height = 0;
 let width = 0;
 let target = {
@@ -30,7 +30,7 @@ export const attachListeners = canvas => {
   canvas.height = height;
   context = canvas.getContext("2d");
 
-  initializeAnimation();
+  startAnimation();
 
   if (!("ontouchstart" in window)) {
     window.addEventListener("mousemove", onMouseMove);
@@ -49,20 +49,18 @@ export const detachListeners = () => {
 };
 
 const createOnResize = canvas => () => {
-  setDimentions();
-
-  canvas.width = width;
-  canvas.height = height;
-};
-
-const setDimentions = () => {
   width = window.innerWidth;
   height = window.innerHeight;
   target = { x: width / 2, y: height / 2 };
-  points = initializePoints(width, height);
+  canvas.width = width;
+  canvas.height = height;
+
+  startAnimation();
 };
 
-const initializeAnimation = () => {
+const startAnimation = () => {
+  points = initializePoints(width, height);
+
   animatePoints();
 
   for (let i in points) {
@@ -71,7 +69,7 @@ const initializeAnimation = () => {
 };
 
 const animatePoints = () => {
-  if (animateHeader) {
+  if (arePointsShown && context) {
     context.clearRect(0, 0, width, height);
 
     for (let i in points) {
@@ -106,13 +104,13 @@ const onMouseMove = e => {
 };
 
 const onMouseLeave = () => {
+  arePointsShown = false;
   window.removeEventListener("mousemove", onMouseMove);
-  animateHeader = false;
   context.clearRect(0, 0, width, height);
 };
 
 const onMouseEnter = () => {
-  animateHeader = true;
+  arePointsShown = true;
   window.addEventListener("mousemove", onMouseMove);
 };
 
