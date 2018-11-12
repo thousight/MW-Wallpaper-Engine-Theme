@@ -1,29 +1,29 @@
 @font-face {
 	font-weight: 100;
 	font-family: 'Lato';
-	src:url('./assets/fonts/Lato/Lato-Hairline.ttf') format('truetype');
+	src:url('../fonts/Lato/Lato-Hairline.ttf') format('truetype');
 }
 
 @font-face {
 	font-weight: 300;
 	font-family: 'Lato';
-	src:url('./assets/fonts/Lato/Lato-Light.ttf') format('truetype');
+	src:url('../fonts/Lato/Lato-Light.ttf') format('truetype');
 }
 
 @font-face {
 	font-weight: 400;
 	font-family: 'Lato';
-	src:url('./assets/fonts/Lato/Lato-Regular.ttf') format('truetype');
+	src:url('../fonts/Lato/Lato-Regular.ttf') format('truetype');
 }
 
 @font-face {
 	font-weight: 700;
 	font-family: 'Lato';
-	src:url('./assets/fonts/Lato/Lato-Bold.ttf') format('truetype');
+	src:url('../fonts/Lato/Lato-Bold.ttf') format('truetype');
 }
 
 body {
-  background: #1E324E url('./assets/img/background.jpg') no-repeat center center fixed;
+  background: #1E324E url('../img/background.jpg') no-repeat center center fixed;
   font-family: Lato, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -33,4 +33,20 @@ body {
   margin: 0;
 	padding: 0;
 	overflow: hidden;
+}
+
+.datetime {
+  position: absolute;
+  left: 50%;
+  bottom: 25px;
+  text-align: center;
+	transform: translate(-50%, -50%);
+}
+
+.datetime h1 {
+  cursor: default;
+  color: #FFFFFF;
+  font-weight: 300;
+  margin: 0;
+  user-select: none;
 }
