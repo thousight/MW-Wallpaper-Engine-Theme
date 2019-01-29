@@ -1,4 +1,7 @@
 # MW Wallpaper Engine Theme
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/thousight/MW-Wallpaper-Engine-Theme.svg)](https://greenkeeper.io/)
+
 My personal Wallpaper Engine theme, heavily inspired by this [time lapse](https://steamcommunity.com/sharedfiles/filedetails/?id=824548506) theme.
 
 ### About React
